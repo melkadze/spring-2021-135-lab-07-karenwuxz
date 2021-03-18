@@ -1,6 +1,6 @@
 main: main.o unindent.o indent.o
 	g++ -o main main.o unindent.o indent.o 
-	./main < testing.cpp
+	./main < input.cpp
 
 tests: tests.o funcs.o
 	g++ -o tests tests.o funcs.o
