@@ -1,9 +1,9 @@
 #include <iostream>
+#include "unindent.h"
+#include "indent.h"
 
-
-#include "funcs.h"
-
-int main()
-{
+int main(){ 
+  // std::cout << formatting() <<std::endl;
+  std::cout << unindent() <<std::endl;
   return 0;
 }
