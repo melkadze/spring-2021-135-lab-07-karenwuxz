@@ -1,6 +1,9 @@
 #include <iostream>
 #include <stdio.h>
 #include <ctype.h>
+#include <string>
+#include <sstream>
+#include <cctype>
 #include "unindent.h"
 
 std::string removingLeadingSpaces(std::string line){
@@ -31,3 +34,21 @@ std::string unindent(){
 }
 
 
+
+// unindent() but with an input for testing.
+// only differences are the inclusion of
+// the std::istringstream line and the
+// replacement of std::cin with issInput
+std::string unindentTesting(std::string input) {
+    std::string code;
+    std::string result = "";
+    
+    // make a stringstream to read line by line
+    std::istringstream issInput(input);
+    
+    while(getline(issInput, code)){
+        result += removingLeadingSpaces(code);
+    }
+    
+    return result;
+}
