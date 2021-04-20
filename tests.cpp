@@ -18,6 +18,7 @@ TEST_CASE("unindent") {
     
     CHECK(unindentTesting("no leading space\n one leading space\n     multiple leading spaces\n") == "no leading space\none leading space\nmultiple leading spaces\n");
     CHECK(unindentTesting("     lines with same indent\n     lines with same indent\n     lines with same indent\n") == "lines with same indent\nlines with same indent\nlines with same indent\n");
+    CHECK(unindentTesting("noIndentsOrSpaces\n") == "noIndentsOrSpaces\n");
 }
 
 TEST_CASE("countChar") {
